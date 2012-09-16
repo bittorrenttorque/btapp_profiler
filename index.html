@@ -5,6 +5,7 @@
 		<script src="http://underscorejs.org/underscore-min.js"></script>  
 		<script src="http://backbonejs.org/backbone-min.js"></script>
 		
+		<script src="https://raw.github.com/joewalnes/smoothie/master/smoothie.js"></script>
 		<!-- jStorage is a hard dependency -->
 		<script src="javascripts/jStorage/jstorage.js"></script>  
 		
@@ -20,8 +21,22 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css" />	
 	</head>
 	<body>
-		<div id="torrents" class="alert alert-info"></div>
-		<div id="files" class="alert alert-warning"></div>
-		<div id="events" class="alert alert-success"></div>
+		<div class="container">
+			<canvas id="delays" width="940" height="100"></canvas>
+			<br>
+			<p style="float:right;">Gui delay (ms)</p>
+			<canvas id="data" width="940" height="100"></canvas>
+			<br>
+			<p style="float:right;">Client update packet size (bytes)</p>
+			<canvas id="torrents" width="940" height="100"></canvas>
+			<br>
+			<p style="float:right;">Number of torrents</p>
+			<canvas id="files" width="940" height="100"></canvas>
+			<br>
+			<p style="float:right;">Number of files</p>
+			<canvas id="filesper" width="940" height="100"></canvas>
+			<br>
+			<p style="float:right;">Number of files per torrent (width reflects fetch + process time)
+		</div>
 	</body>
 </html>
